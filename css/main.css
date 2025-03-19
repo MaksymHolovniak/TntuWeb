@@ -1,0 +1,9 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F6F6;
+    color: #0F1F1C;
+}
+.header__content a{
+    text-decoration: none;
+    color: #877a7a;
+}
