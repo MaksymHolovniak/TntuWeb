@@ -66,7 +66,9 @@ body {
     color: var(--white);
 }
 
-.main {
+/* Home Page */
+
+.home__main {
 
 }
 
@@ -145,4 +147,37 @@ body {
 
 .blocks__content a {
     color: var(--blue);
+}
+
+/* Biography Page */
+
+.biography__main {
+
+}
+
+.biography-content {
+    padding-top: 33px;
+}
+
+.biography-content__left {
+    text-align: left;
+    display: inline-block;
+}
+.biography-content__left h1 {
+    margin-bottom: 46px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+.biography-content__left p {
+    width: 564px;
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.biography-content__right {
+    margin-top: 100px;
+    float: right;
+    width: 518px
 }
