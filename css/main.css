@@ -181,3 +181,82 @@ body {
     float: right;
     width: 518px
 }
+
+/* Group Page */
+
+.group__main {
+
+}
+
+.group-content {
+    padding-top: 33px;
+    margin-bottom: 109px;
+}
+
+.group-content h1{
+    margin-bottom: 46px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.group__wrapper {
+    height: 303px;
+}
+.group-content__left {
+    text-align: left;
+    display: inline-block;
+}
+
+.group-content__left p {
+    width: 564px;
+    margin-bottom: 24px;
+    margin-right: 85px;
+    font-size: 18px;
+}
+
+.group-content__right {
+    float: right;
+    width: 454px
+}
+
+.group-schedule {
+    margin-bottom: 128px;
+}
+
+.group-schedule__text {
+    text-align: center;
+    width: 697px;
+    font-size: 18px;
+    margin: 0 auto 64px;
+    color: var(--gray);
+}
+
+.group-schedule__text h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 11px;
+    color: var(--dark);
+}
+
+.group-schedule__blocks {
+    display: flex;
+    column-gap: 25px;
+}
+
+.schedule__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 201px;
+    height: 190px;
+    padding: 19px 16px 11px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.schedule__content h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
