@@ -174,6 +174,7 @@ body {
     width: 564px;
     margin-bottom: 24px;
     font-size: 18px;
+    line-height: 28px;
 }
 
 .biography-content__right {
@@ -193,11 +194,21 @@ body {
     margin-bottom: 109px;
 }
 
-.group-content h1 {
+.group-content__title {
+    display: flex;
+    column-gap: 12px;
+    align-items: baseline;
+}
+.group-content__title img {
+    width: 28px;
+    height: 28px;
+}
+.group-content__title h1 {
     margin-bottom: 46px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 40px;
     font-weight: 600;
+    line-height: 1;
 }
 .group__wrapper {
     height: 303px;
@@ -231,11 +242,23 @@ body {
     color: var(--gray);
 }
 
-.group-schedule__text h2 {
+.group-schedule__title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+.group-schedule__title img {
+    width: 28px;
+    height: 28px;
+}
+.group-schedule__title h2 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 11px;
     color: var(--dark);
+    line-height: 1;
 }
 
 .group-schedule__blocks {
@@ -249,7 +272,7 @@ body {
     row-gap: 15px;
     width: 201px;
     height: 190px;
-    padding: 19px 16px 11px;
+    padding: 19px 6px 11px 10px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -341,4 +364,66 @@ body {
 
 .hobby-football {
     background-color: #FFF7ED;
+}
+
+/* Interesting Page */
+
+.interesting__main {
+}
+
+.interesting-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
+}
+
+.interesting-title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    max-width: 576px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 27px;
+}
+
+.interesting-title h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.interesting-title p {
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.interesting__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.interesting__blocks-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 349px;
+    height: 142px;
+    padding-top: 16px;
+    padding-left: 11px;
+}
+
+.interesting__blocks-content h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.interesting__blocks-content p {
+    color: var(--gray);
+    line-height: 26px;
 }
