@@ -193,7 +193,7 @@ body {
     margin-bottom: 109px;
 }
 
-.group-content h1{
+.group-content h1 {
     margin-bottom: 46px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 40px;
@@ -259,4 +259,86 @@ body {
     font-weight: 600;
 }
 
+/* Hobby Page */
 
+.hobby__main {
+}
+
+.hobby-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.hobby-title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 576px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 27px;
+}
+
+.hobby-title h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.hobby-title p {
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.hobby__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 71px;
+    row-gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobby__blocks-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 277px;
+    height: 153px;
+    padding: 16px 12px 0;
+}
+
+.hobby__blocks-content h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hobby__blocks-content p {
+    color: var(--gray);
+}
+
+.hobby-programming {
+    background-color: #EFF6FF;
+}
+
+.hobby-basketball {
+    background-color: #FAF5FF;
+}
+
+.hobby-bicycle {
+    background-color: #F0FDF4;
+}
+
+.hobby-walk {
+    background-color: #FEFCE8;
+}
+
+.hobby-chess {
+    background-color: #FEF2F2;
+}
+
+.hobby-football {
+    background-color: #FFF7ED;
+}
