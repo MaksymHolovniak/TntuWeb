@@ -73,6 +73,7 @@ body {
 }
 
 .welcome {
+    position: relative;
     height: 903px;
     background: url("../img/home/home-bakground.png") no-repeat center;
     background-size: cover;
@@ -80,16 +81,16 @@ body {
 }
 
 .welcome__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--white);
-    width: 100%;
-}
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     font-size: 20px;
+     font-weight: 500;
+     color: var(--white);
+     width: 100%;
+ }
 
 .welcome__text h1 {
     font-family: "Plus Jakarta Sans", sans-serif;
