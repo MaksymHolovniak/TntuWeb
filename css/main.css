@@ -21,44 +21,46 @@ body {
     margin: 0 auto;
 }
 
+/* Header */
+
 .header {
     background-color: #1D1D1D;
     height: 80px;
 }
 
 .nav {
-    text-align: right;
-    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
     line-height: 80px;
     font-weight: 400;
     font-size: 20px;
 }
 
 .nav__logo {
-    vertical-align: middle;
-    float: left;
     height: 62px;
 }
 
-.nav__logo-text {
-    display: inline-block;
-    color: var(--white);
-    margin-left: 25px;
+.nav__logo a {
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
 }
+
+.nav__logo-text {
+    color: var(--white);
+}
+
 .nav__logo img {
-    vertical-align: middle;
     width: 62px;
     height: 62px;
 }
 
 .nav__list {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    column-gap: 40px;
 }
 
 .nav__list li {
-    display: inline-block;
-    margin-left: 40px;
 }
 
 .nav__list a {
@@ -73,24 +75,25 @@ body {
 }
 
 .welcome {
+    width: 100%;
     position: relative;
     height: 903px;
-    background: url("../img/home/home-bakground.png") no-repeat center;
+    background: url("../img/home/home-bakground.png") no-repeat center center;
     background-size: cover;
     margin-bottom: 109px;
 }
 
 .welcome__text {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     text-align: center;
-     font-size: 20px;
-     font-weight: 500;
-     color: var(--white);
-     width: 100%;
- }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+    width: 100%;
+}
 
 .welcome__text h1 {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -105,44 +108,54 @@ body {
 
 .learn-more {
     margin-bottom: 128px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 62px;
 }
 
 .learn-more__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+    align-items: center;
     text-align: center;
-    width: 697px;
+    max-width: 697px;
     font-size: 18px;
-    margin: 0 auto 64px;
     color: var(--gray);
 }
 
 .learn-more__text h2 {
     font-size: 36px;
     font-weight: 600;
-    margin-bottom: 11px;
     color: var(--dark);
 }
 
+.learn-more__text p {
+    line-height: 30px;
+}
+
 .learn-more__blocks {
-    display: inline-block;
+    display: flex;
+    column-gap: 34px;
     align-items: center;
 }
 
 .blocks__content {
-    display: inline-block;
-    margin-right: 34px;
-    width: 242px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
+
 .blocks__content h3 {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
 }
 
 .blocks__content p {
     color: var(--gray);
-    line-height: 25px;
-    margin-bottom: 15px;
+    line-height: 30px;
 }
 
 
@@ -150,38 +163,84 @@ body {
     color: var(--blue);
 }
 
+/* Footer */
+.footer {
+    background-color: #E3E1EB;
+    padding: 23px 0;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    text-align: center;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+.footer__nav-li a {
+    color: #1F2937;
+}
+
+.footer__copyright {
+    color: var(--gray);
+}
+
 /* Biography Page */
 
 .biography__main {
-
+    margin-bottom: 204px;
 }
 
 .biography-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
     padding-top: 33px;
 }
 
-.biography-content__left {
-    text-align: left;
-    display: inline-block;
+.biography-content__blocks {
+    display: flex;
+    column-gap: 45px;
 }
-.biography-content__left h1 {
-    margin-bottom: 46px;
+
+.biography-content__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+    width: 560px;
+}
+
+.biography-content__title {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 40px;
     font-weight: 600;
-
 }
-.biography-content__left p {
-    width: 564px;
-    margin-bottom: 24px;
+
+.biography-content__text {
+    display: flex;
+    flex-direction: column;
     font-size: 18px;
     line-height: 28px;
+    row-gap: 24px;
 }
 
 .biography-content__right {
-    margin-top: 100px;
-    float: right;
-    width: 518px
+    width: 518px;
+}
+
+.biography-content__right img {
+    width: 518px;
 }
 
 /* Group Page */
@@ -191,6 +250,9 @@ body {
 }
 
 .group-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
     padding-top: 33px;
     margin-bottom: 109px;
 }
@@ -200,34 +262,38 @@ body {
     column-gap: 12px;
     align-items: baseline;
 }
+
 .group-content__title img {
     width: 28px;
     height: 28px;
 }
+
 .group-content__title h1 {
-    margin-bottom: 46px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 40px;
     font-weight: 600;
     line-height: 1;
 }
+
 .group__wrapper {
+    display: flex;
+    column-gap: 85px;
     height: 303px;
 }
+
 .group-content__left {
-    text-align: left;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 564px;
 }
 
 .group-content__left p {
-    width: 564px;
-    margin-bottom: 24px;
-    margin-right: 85px;
     font-size: 18px;
+    line-height: 24px
 }
 
 .group-content__right {
-    float: right;
     width: 454px
 }
 
@@ -254,6 +320,7 @@ body {
     width: 28px;
     height: 28px;
 }
+
 .group-schedule__title h2 {
     font-size: 36px;
     font-weight: 600;
@@ -286,6 +353,7 @@ body {
 /* Hobby Page */
 
 .hobby__main {
+    margin-bottom: 132px;
 }
 
 .hobby-content {
@@ -370,6 +438,7 @@ body {
 /* Interesting Page */
 
 .interesting__main {
+    margin-bottom: 173px;
 }
 
 .interesting-content {
