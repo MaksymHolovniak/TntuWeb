@@ -25,15 +25,15 @@ body {
 
 .header {
     background-color: #1D1D1D;
-    height: 80px;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     line-height: 80px;
     font-weight: 400;
     font-size: 20px;
+    height: 80px;
 }
 
 .nav__logo {
@@ -41,7 +41,8 @@ body {
 }
 
 .nav__logo a {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     column-gap: 25px;
     align-items: center;
 }
@@ -56,8 +57,10 @@ body {
 }
 
 .nav__list {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     column-gap: 40px;
+    justify-self: end;
 }
 
 .nav__list li {
@@ -66,6 +69,11 @@ body {
 .nav__list a {
     text-decoration: none;
     color: var(--white);
+    transition: color 0.2s ease;
+}
+
+.nav__list a:hover {
+    color: var(--blue);
 }
 
 /* Home Page */
@@ -76,19 +84,17 @@ body {
 
 .welcome {
     width: 100%;
-    position: relative;
     height: 903px;
     background: url("../img/home/home-bakground.png") no-repeat center center;
     background-size: cover;
     margin-bottom: 109px;
+
+    display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 .welcome__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     font-size: 20px;
     font-weight: 500;
     color: var(--white);
@@ -108,17 +114,14 @@ body {
 
 .learn-more {
     margin-bottom: 128px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 62px;
+    justify-items: center;
 }
 
 .learn-more__text {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 11px;
-    align-items: center;
     text-align: center;
     max-width: 697px;
     font-size: 18px;
@@ -136,21 +139,26 @@ body {
 }
 
 .learn-more__blocks {
-    display: flex;
-    column-gap: 34px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 34px;
+    width: 100%;
 }
 
 .blocks__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 15px;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    text-align: left;
 }
 
 .blocks__content h3 {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 20px;
     font-weight: 600;
+    color: var(--dark);
 }
 
 .blocks__content p {
@@ -170,30 +178,35 @@ body {
 }
 
 .footer__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 35px;
     text-align: center;
 }
 
 .footer__nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
 }
 
 .footer__nav-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 14px;
 }
 
 .footer__nav-li a {
     color: #1F2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__nav-li a:hover {
+    color: var(--blue);
 }
 
 .footer__copyright {
     color: var(--gray);
+    font-size: 14px;
 }
 
 /* Biography Page */
@@ -203,22 +216,9 @@ body {
 }
 
 .biography-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 40px;
     padding-top: 33px;
-}
-
-.biography-content__blocks {
-    display: flex;
-    column-gap: 45px;
-}
-
-.biography-content__left {
-    display: flex;
-    flex-direction: column;
-    row-gap: 46px;
-    width: 560px;
 }
 
 .biography-content__title {
@@ -227,12 +227,25 @@ body {
     font-weight: 600;
 }
 
+.biography-content__blocks {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 45px;
+    align-items: start;
+}
+
+.biography-content__left {
+    display: grid;
+    row-gap: 46px;
+    width: 100%;
+}
+
+
 .biography-content__text {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    row-gap: 24px;
     font-size: 18px;
     line-height: 28px;
-    row-gap: 24px;
 }
 
 .biography-content__right {
@@ -240,7 +253,8 @@ body {
 }
 
 .biography-content__right img {
-    width: 518px;
+    width: 100%;
+    max-width: 518px;
 }
 
 /* Group Page */
@@ -250,17 +264,18 @@ body {
 }
 
 .group-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 46px;
     padding-top: 33px;
     margin-bottom: 109px;
 }
 
 .group-content__title {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     column-gap: 12px;
     align-items: baseline;
+    max-width: fit-content;
 }
 
 .group-content__title img {
@@ -276,16 +291,15 @@ body {
 }
 
 .group__wrapper {
-    display: flex;
-    column-gap: 85px;
-    height: 303px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    height: auto;
 }
 
 .group-content__left {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 24px;
-    width: 564px;
 }
 
 .group-content__left p {
@@ -294,7 +308,9 @@ body {
 }
 
 .group-content__right {
-    width: 454px
+    width: 100%;
+    max-width: 454px;
+    height: auto;
 }
 
 .group-schedule {
@@ -303,17 +319,18 @@ body {
 
 .group-schedule__text {
     text-align: center;
-    width: 697px;
     font-size: 18px;
     margin: 0 auto 64px;
     color: var(--gray);
 }
 
 .group-schedule__title {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: baseline;
     justify-content: center;
     column-gap: 12px;
+    margin-bottom: 11px;
 }
 
 .group-schedule__title img {
@@ -324,22 +341,19 @@ body {
 .group-schedule__title h2 {
     font-size: 36px;
     font-weight: 600;
-    margin-bottom: 11px;
     color: var(--dark);
     line-height: 1;
 }
 
 .group-schedule__blocks {
-    display: flex;
-    column-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
 }
 
 .schedule__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 15px;
-    width: 201px;
-    height: 190px;
     padding: 19px 6px 11px 10px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -357,14 +371,12 @@ body {
 }
 
 .hobby-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 60px;
 }
 
 .hobby-title {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 10px;
     max-width: 576px;
     text-align: center;
@@ -384,17 +396,14 @@ body {
 }
 
 .hobby__blocks {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 71px;
-    row-gap: 35px;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+    gap: 35px 71px;
+    justify-items: center;
 }
 
 .hobby__blocks-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 15px;
     width: 277px;
     height: 153px;
@@ -442,14 +451,12 @@ body {
 }
 
 .interesting-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 52px;
 }
 
 .interesting-title {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 15px;
     max-width: 576px;
     text-align: center;
@@ -469,17 +476,14 @@ body {
 }
 
 .interesting__blocks {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 40px;
-    row-gap: 40px;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
+    gap: 40px;
+    justify-items: center;
 }
 
 .interesting__blocks-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     row-gap: 15px;
     width: 349px;
     height: 142px;
