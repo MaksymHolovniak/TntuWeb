@@ -259,6 +259,82 @@ body {
 
 /* Group Page */
 
+.banner {
+    background: url('../img/banner/banner-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+}
+
+.banner__text {
+    margin: 10px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.banner__content h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.banner__content h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.banner__content p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-animate-1 {
+    animation: textInUp 1s ease-out forwards;
+}
+.text-animate-2 {
+    animation: textInUp 1s ease-out 0.5s forwards;
+}
+.text-animate-3 {
+    animation: textInUp 1s ease-out 1s forwards;
+}
+
+@keyframes textInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.banner__images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.animated-icon {
+    width: 80px;
+    height: 80px;
+    animation: iconInfinite 3s ease-in-out infinite;
+}
+
+.icon-2 { animation-delay: 0.5s; }
+.icon-3 { animation-delay: 1s; }
+
+@keyframes iconInfinite {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 1200px) {
+    .banner { height: 600px; }
+}
+@media (max-width: 992px) {
+    .banner { height: 500px; }
+}
+@media (max-width: 768px) {
+    .banner { height: 400px; }
+}
+
 .group__main {
 
 }
