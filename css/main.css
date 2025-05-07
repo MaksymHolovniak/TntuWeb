@@ -577,3 +577,9 @@ body {
     color: var(--gray);
     line-height: 26px;
 }
+
+.widgets {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
