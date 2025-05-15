@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Особистий блог</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="./../js/main.js"></script>
 </head>
-<body>
+<body
+        oncontextmenu="showCustomMenu(true,event.pageX,event.pageY); return false; event.preventDefault();"
+        onclick="showCustomMenu(false);"
+>
 <header class="header">
     <div class="container">
         <nav class="nav">
@@ -53,8 +57,24 @@
                     <p>Більшість студентів проживають у місті Тернопіль. Наша група є дружньою та життєрадісною.</p>
                 </div>
                 <div class="group-content__right">
-                    <img src="../img/group/group.png" alt="Код на моніторі"/>
+                    <img
+                            src="../img/group/group.png"
+                            alt="Код на моніторі"
+                            onmouseover="this.src='../img/group/group-hover.jpg'"
+                            onmouseout="this.src='../img/group/group.png'"
+                    />
                 </div>
+            </div>
+            <div class="check-input">
+                <label for="digitInput">Введіть лише цифри:</label><br>
+                <input type="text" id="digitInput" onkeypress="return checkSymbol(event.keyCode)" placeholder="Лише цифри">
+            </div>
+            <div id="custom-menu">
+                <div onclick="doAction('copy')">Скопіювати вміст документа</div>
+                <div onclick="doAction('close')">Закрити вікно</div>
+                <div onclick="doAction('fontIncrease')">Збільшити шрифт</div>
+                <div onclick="doAction('fontDecrease')">Зменшити шрифт</div>
+                <div onclick="doAction('changeBkg')">Змінити фон</div>
             </div>
         </section>
         <section class="group-schedule">

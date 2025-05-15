@@ -388,6 +388,10 @@ body {
     max-width: 454px;
     height: auto;
 }
+.group-content__right img {
+    width: 454px;
+    height: 303px;
+}
 
 .group-schedule {
     margin-bottom: 128px;
@@ -426,6 +430,25 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
 }
+#custom-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#custom-menu div {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+#custom-menu div:hover {
+    border: 1px solid #000;
+}
 
 .schedule__content {
     display: grid;
@@ -439,7 +462,24 @@ body {
     font-size: 18px;
     font-weight: 600;
 }
+.check-input {
+    margin-top: 20px;
+}
+.check-input label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
 
+.check-input input {
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
 /* Hobby Page */
 
 .hobby__main {
